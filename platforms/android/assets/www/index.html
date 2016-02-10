@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie finder</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/ratchet.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/ratchet.min.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <header class="bar bar-nav">
+      <a class="icon icon-gear pull-right" href="#settingsModal"></a>
+      <h1 class="title">#BogotaSinHuecos</h1>
+    </header>
+
+    <div class="content">
+
+    <img src="img/bogotasinhuecos.jpg" alt="BogotaSinHuecos" style="width:100%"/> 
+
+    <a class="twitter-timeline" href="https://twitter.com/hashtag/BogotaSinHuecos" data-widget-id="697134302392360960">Tweets sur #BogotaSinHuecos</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    </div><!-- /.content -->
+
+    <div class="bar bar-standard bar-footer">
+	    <a class="btn btn-block btn-positive" href="#reportModal">Reportar</a>
+    </div>
+
+    <!-- Settings modal -->
+    <div id="settingsModal" class="modal">
+      <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#settingsModal"></a>
+        <h1 class="title">Settings</h1>
+      </header>
+
+      <div class="content">
+        <form class="input-group">
+          <input type="text" placeholder="Full name">
+          <input type="email" placeholder="Email">
+          <input type="text" placeholder="Username">
+        </form>
+
+        <h5 class="content-padded">App settings</h5>
+
+        <ul class="table-view">
+          <li class="table-view-cell media">
+            <span class="media-object pull-left icon icon-sound"></span>
+            <div class="media-body">
+              Enable sounds
+            </div>
+            <div class="toggle">
+              <div class="toggle-handle"></div>
+            </div>
+          </li>
+          <li class="table-view-cell media">
+            <span class="media-object pull-left icon icon-person"></span>
+            <div class="media-body">
+              Parental controls
+            </div>
+            <div class="toggle">
+              <div class="toggle-handle"></div>
+            </div>
+          </li>
+        </ul>
+        <div class="content-padded">
+          <button class="btn btn-positive btn-block">Save settings</button>
+        </div>
+      </div>
+    </div><!-- /.modal -->
+
+    <!-- Report modal -->
+    <div id="reportModal" class="modal">
+      <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#reportModal"></a>
+        <h1 class="title">Settings</h1>
+      </header>
+
+      <div class="content">
+        <form>
+          <img src="img/no-picture.png" alt="Ninguna imagen" />
+          <button class="btn btn-block" onclick="getPicture()">
+            <i class="fa fa-picture-o"></i>
+            Foto
+          </button>
+          <textarea rows="5"></textarea>
+          <button class="btn btn-positive btn-block">Enviar</button>
+        </form>
+      </div>
+    </div><!-- /.modal -->
+  </body>
+</html>
+

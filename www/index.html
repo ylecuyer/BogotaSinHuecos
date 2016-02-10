@@ -7,9 +7,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <link rel="stylesheet" href="/css/ratchet.min.css">
+    <link rel="stylesheet" href="css/ratchet.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
-    <script src="/js/ratchet.min.js"></script>
+    <script src="js/ratchet.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
   </head>
   <body>
     <header class="bar bar-nav">
@@ -27,7 +30,7 @@
     </div><!-- /.content -->
 
     <div class="bar bar-standard bar-footer">
-	    <button class="btn btn-block btn-positive">Reportar</button>
+	    <a class="btn btn-block btn-positive" href="#reportModal">Reportar</a>
     </div>
 
     <!-- Settings modal -->
@@ -69,6 +72,26 @@
         <div class="content-padded">
           <button class="btn btn-positive btn-block">Save settings</button>
         </div>
+      </div>
+    </div><!-- /.modal -->
+
+    <!-- Report modal -->
+    <div id="reportModal" class="modal">
+      <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#reportModal"></a>
+        <h1 class="title">Settings</h1>
+      </header>
+
+      <div class="content">
+        <form>
+          <img src="img/no-picture.png" style="width:100%" alt="Ninguna imagen" id="picture" />
+          <a class="btn btn-block" onclick="getPicture()" data-ignore="push">
+            <i class="fa fa-picture-o"></i>
+            Foto
+          </a>
+          <textarea rows="5"></textarea>
+          <button class="btn btn-positive btn-block">Enviar</button>
+        </form>
       </div>
     </div><!-- /.modal -->
   </body>
